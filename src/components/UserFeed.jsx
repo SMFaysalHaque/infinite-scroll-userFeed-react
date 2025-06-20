@@ -43,8 +43,8 @@ export default function UserFeed() {
         if (entry.isIntersecting && hasMore) {
           fetchUsers();
         }
-      },
-      { threshold: 1.0 }
+      }
+      //   { threshold: 1.0 }
     );
 
     const el = observerRef.current;
