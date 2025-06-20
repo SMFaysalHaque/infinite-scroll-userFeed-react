@@ -93,4 +93,3 @@ src/
 ├── App.jsx
 └── main.jsx
 ```
-🌐 Demo: https://infinite-scroll-user-feed-react.vercel.app/
