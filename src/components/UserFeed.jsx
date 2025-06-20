@@ -37,15 +37,12 @@ export default function UserFeed() {
   }, []);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0];
-        if (entry.isIntersecting && hasMore) {
-          fetchUsers();
-        }
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      if (entry.isIntersecting && hasMore) {
+        fetchUsers();
       }
-      //   { threshold: 1.0 }
-    );
+    });
 
     const el = observerRef.current;
     if (el) observer.observe(el);
